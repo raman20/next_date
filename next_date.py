@@ -1,11 +1,11 @@
 def generate_next_date(day,month,year):
-    next_day = 0
-    next_month = 0
-    next_year = 0
+    #Start writing your code here
+    next_day = day
+    next_month = month
+    next_year = year
     if month in [1,3,5,7,8,10,12]:
         if day<31:
             next_day=day+1
-            next_year = year
         elif day==31:
             next_day = 1
             if month == 12:
@@ -13,7 +13,6 @@ def generate_next_date(day,month,year):
                 next_month = 1
             else:
                 next_month = month+1
-                next_year = year
                 
     elif month in [2,4,6,9,11]:
         if month == 2:
@@ -35,7 +34,7 @@ def generate_next_date(day,month,year):
             elif day == 30:
                 next_day =1
                 next_month=month+1
-        next_year = year      
+                
     print(next_day,"-",next_month,"-",next_year)
 
 
